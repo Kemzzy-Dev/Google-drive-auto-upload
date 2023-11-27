@@ -1,6 +1,4 @@
-import sys
 import os
-import logging
 from watchdog.observers import Observer
 from watchdog.events import LoggingEventHandler, FileSystemEventHandler
 from pydrive.auth import GoogleAuth
@@ -81,7 +79,7 @@ class LoggingEventHandler(FileSystemEventHandler):
 
 if __name__ == "__main__":
 
-    path = './backup'
+    path = '../backup'
     event_handler = LoggingEventHandler()
     observer = Observer()
     observer.schedule(event_handler, path)
